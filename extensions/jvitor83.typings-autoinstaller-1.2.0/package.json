@@ -1,0 +1,54 @@
+{
+	"name": "typings-autoinstaller",
+	"displayName": "Typings auto installer",
+	"description": "Any time you save either package.json or bower.json the typings package will be installed/uninstalled automatically in the background.",
+	"version": "1.2.0",
+	"publisher": "jvitor83",
+	"author": {
+		"name": "Joao Vitor Paes de Barros do Carmo [https://about.me/jvitor83]"
+	},
+	"engines": {
+		"vscode": "^0.10.6"
+	},
+	"icon": "images/Typings-AutoInstaller-Icon2.png",
+	"categories": [
+		"Other"
+	],
+	"galleryBanner": {
+		"color": "#ffcc2f",
+		"theme": "light"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jvitor83/typings-autoinstaller.git"
+	},
+	"activationEvents": [
+		"workspaceContains:package.json",
+		"onCommand:typings.installAllDependencies"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "typings.installAllDependencies",
+				"title": "Typings: Install definitions for all dependencies"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^1.7.5",
+		"typings": "^1.0.4",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "7284bc36-72ff-4127-8a41-dcbbe86a661f",
+		"publisherId": "0b3a9667-0e69-42ff-8c08-1fb802e7dcbb",
+		"publisherDisplayName": "João Vitor Paes de Barros do Carmo"
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "md-navigate",
+	"displayName": "Markdown Navigate",
+	"description": "Navigate in Markdown files",
+	"version": "0.0.1",
+	"publisher": "jrieken",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other",
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./out/src/extension",
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/jrieken/md-navigate/issues",
+	"bugs": {
+		"url": "https://github.com/jrieken/md-navigate/issues"
+	},
+	"__metadata": {
+		"id": "cd42ba57-4693-4945-8e2b-bbbb703b1a5f",
+		"publisherId": "5e9ecc2e-9fec-4348-abfd-1e5977f0aef6",
+		"publisherDisplayName": "Johannes Rieken"
+	}
+}

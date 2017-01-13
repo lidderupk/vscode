@@ -1,0 +1,64 @@
+{
+	"name": "vscode-csstree",
+	"displayName": "CSSTree validator",
+	"description": "Validate CSS according to W3C specs and browser implementations",
+	"version": "0.1.6",
+	"keywords": [
+		"css",
+		"csstree",
+		"lint",
+		"validator",
+		"w3c"
+	],
+	"license": "MIT",
+	"publisher": "smelukov",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": [
+		"Linters"
+	],
+	"activationEvents": [
+		"onLanguage:css"
+	],
+	"homepage": "https://github.com/csstree/vscode-plugin",
+	"repository": "https://github.com/csstree/vscode-plugin",
+	"bugs": "https://github.com/csstree/vscode-plugin/issues",
+	"main": "./out/src/extension",
+	"galleryBanner": {
+		"theme": "dark",
+		"color": "#333"
+	},
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "CSSTree validtor configuration",
+			"properties": {
+				"csstree.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable CSSTree validation for CSS files."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"dependencies": {
+		"csstree-validator": "1.0.5",
+		"vscode-languageclient": "^2.5.0",
+		"vscode-languageserver": "^2.5.0"
+	},
+	"__metadata": {
+		"id": "728edef3-6dc4-4e13-a84d-65ecdff6a365",
+		"publisherId": "fdda85ff-d682-46eb-beda-6f5435946181",
+		"publisherDisplayName": "Sergey Melyukov"
+	}
+}
